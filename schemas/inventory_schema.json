@@ -1,0 +1,46 @@
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Inventory Change Event",
+  "type": "object",
+  "required": [
+    "event_id",
+    "product_id",
+    "warehouse_id",
+    "quantity_change",
+    "reason",
+    "event_timestamp"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "product_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "warehouse_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "quantity_change": {
+      "type": "integer"
+    },
+    "reason": {
+      "type": "string",
+      "enum": [
+        "DAMAGED",
+        "RESTOCK",
+        "ORDER_PLACED",
+        "RETURNED",
+        "CORRECTION"
+      ]
+    },
+    "event_timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}
