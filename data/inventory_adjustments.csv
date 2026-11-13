@@ -1,4 +1,3 @@
-
 event_id,product_id,warehouse_id,quantity_change,reason,event_timestamp
 INV001,PROD101,WH001,-5,DAMAGED,2026-11-12T10:00:00Z
 INV002,PROD102,WH001,20,RESTOCK,2026-11-12T10:05:00Z

@@ -11,7 +11,7 @@ PROJECT_ID = os.getenv(
     "pioneering-flow-436606-t9"
 )
 
-TOPIC_ID = "inventory-topic"
+TOPIC_ID = "inventory-topic-practice"
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 CSV_FILE = BASE_DIR / "data" / "inventory_adjustments.csv"
@@ -25,7 +25,7 @@ def publish_inventory_events():
 
     total_published = 0
 
-    with open(CSV_FILE, "r", newline="") as file:
+    with open(CSV_FILE, "r", newline="", encoding="utf-8-sig") as file:
 
         reader = csv.DictReader(file)
 

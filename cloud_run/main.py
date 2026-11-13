@@ -8,7 +8,7 @@ from pathlib import Path
 from flask import Flask, request, jsonify
 from jsonschema import validate, ValidationError, FormatChecker
 
-from scheduler.scheduled_processor import run_scheduled_notification
+from scheduler.scheduler_processor import run_scheduled_notification
 
 app = Flask(__name__)
 
